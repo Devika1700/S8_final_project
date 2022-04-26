@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">dyslexia_final</string>
+    <string name="hint">Tap on mic to start</string>
+    <string name="hint2">Pronounce the word  WHO</string>
+    <string name="hint3">Pronounce the word  HOW</string>
+    <string name="hint4">Pronounce the word  SAW</string>
+    <string name="hint5">Pronounce the word  WAS</string>
+</resources>
