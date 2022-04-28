@@ -2,10 +2,18 @@ package com.example.programmingknowledge.image_to_text;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.method.ScrollingMovementMethod;
+import android.text.style.ForegroundColorSpan;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.View;
 import android.widget.Button;
@@ -14,19 +22,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.vision.Frame;
 import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
 
-import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
     ImageView imageView;
     TextView textView;
     Bitmap bitmap;
     TextToSpeech textToSpeech;
+    String sentence;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         textView=findViewById(R.id.textView);
         textView.setMovementMethod(new ScrollingMovementMethod());
         Button button1=findViewById(R.id.showText);
+        Button button3=findViewById(R.id.button3);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,15 +62,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
-        textToSpeech = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int i) {
 
-                // if No error is found then only it will run
-                if(i!=TextToSpeech.ERROR){
-                    // To Choose language of speech
-                    textToSpeech.setLanguage(Locale.UK);
-                }
+        textToSpeech = new TextToSpeech(this, this);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(View view) {
+                click();
             }
         });
     }
@@ -87,12 +95,85 @@ public class MainActivity extends AppCompatActivity {
                 TextBlock textBlock=sparseArray.valueAt(i);
                 stringBuilder.append(textBlock.getValue());
                 stringBuilder.append("\n");
-                textToSpeech.speak((String.valueOf(stringBuilder)),TextToSpeech.QUEUE_FLUSH,null);
-
+                sentence = String.valueOf(stringBuilder);
             }
-            textView.setText(stringBuilder.toString());
-
+            textView.setText(sentence);
 
         }
+    }
+    public void onInit ( int status){
+
+        textToSpeech.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+
+            //called when speaking starts
+            @Override
+            public void onStart(String utteranceId) {
+                Log.i("TTS", "utterance started");
+            }
+
+            //called when speaking is finished.
+            @Override
+            public void onDone(String utteranceId) {
+                Log.i("TTS", "utterance done");
+            }
+
+            //called when an error has occurred during processing.
+            @Override
+            public void onError(String utteranceId) {
+                Log.i("TTS", "utterance error");
+            }
+
+            //called when the TTS service is about to speak
+            //the specified range of the utterance with the given utteranceId.
+            @Override
+            public void onRangeStart(String utteranceId,
+                                     final int start,
+                                     final int end,
+                                     int frame) {
+                Log.i("TTS", "onRangeStart() ... utteranceId: " + utteranceId + ", start: " + start
+                        + ", end: " + end + ", frame: " + frame);
+
+
+                // onRangeStart (and all UtteranceProgressListener callbacks) do not run on main thread
+                // so we explicitly manipulate views on the main thread.
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        Spannable textWithHighlights = new SpannableString(sentence);
+
+
+                        textWithHighlights.setSpan(new ForegroundColorSpan(Color.RED), start, end, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+                        textView.setText(textWithHighlights);
+
+
+                    }
+                });
+
+            }
+
+        });
+
+    }
+
+
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    public void click() {
+
+        textToSpeech.speak(sentence, TextToSpeech.QUEUE_FLUSH, null, "UNIQUE_UTTERANCE_ID");
+
+    }
+
+
+
+    @Override
+    public void onDestroy() {
+        //don't forget to shutdown tts
+        if (textToSpeech != null) {
+            textToSpeech.stop();
+            textToSpeech.shutdown();
+        }
+        super.onDestroy();
     }
 }
