@@ -48,13 +48,6 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         Button button1=findViewById(R.id.showText);
         Button button3=findViewById(R.id.button3);
 
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getTextFromImage();
-            }
-        });
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,7 +56,15 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             }
         });
 
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getTextFromImage();
+            }
+        });
+
         textToSpeech = new TextToSpeech(this, this);
+
         button3.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
@@ -155,18 +156,12 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         });
 
     }
-
-
-
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void click() {
 
         textToSpeech.speak(sentence, TextToSpeech.QUEUE_FLUSH, null, "UNIQUE_UTTERANCE_ID");
 
     }
-
-
-
     @Override
     public void onDestroy() {
         //don't forget to shutdown tts
