@@ -40,10 +40,8 @@
 
     <Button
         android:id="@+id/learn_btn"
-
         android:layout_width="180dp"
         android:layout_height="71dp"
-
         android:background="@drawable/buttonshape"
         android:fontFamily="@font/open"
         android:shadowColor="#000000"

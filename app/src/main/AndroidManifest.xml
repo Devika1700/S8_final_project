@@ -26,6 +26,24 @@
         <activity android:name=".speech3"/>
         <activity android:name=".cat"/>
         <activity android:name=".phonics"/>
+        <activity android:name=".pract1"/>
+        <activity android:name=".bus"/>
+        <activity android:name=".dog"/>
+        <activity android:name=".bed"/>
+        <activity android:name=".zip"/>
+        <activity android:name=".level"/>
+        <activity android:name=".pony"/>
+        <activity android:name=".fire"/>
+        <activity android:name=".junk"/>
+        <activity android:name=".find"/>
+        <activity android:name=".bone"/>
+        <activity android:name=".owl"/>
+        <activity android:name=".chop"/>
+        <activity android:name=".shop"/>
+        <activity android:name=".pract2"/>
+        <activity android:name=".pract3"/>
+        <activity android:name=".pract4"/>
+        <activity android:name=".pract5"/>
         <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="orc"></meta-data>
     </application>
