@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/speech"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#83A3BC"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:weightSum="10"
+    tools:context=".speech">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSpeakContainer"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/voiceInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:forceHasOverlappingRendering="true"
+            android:fontFamily="@font/open"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/btnSpeakContainer"
+        android:layout_width="395dp"
+        android:layout_height="317dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="67dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageButton
+            android:id="@+id/btnSpeak"
+            android:layout_width="133dp"
+            android:layout_height="123dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/mic" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="85dp"
+        android:layout_height="73dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/backbtn" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="85dp"
+        android:layout_height="73dp"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/next" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="wrap_content"
+        android:layout_height="274dp"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@drawable/dog" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="104dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="35dp"
+        app:srcCompat="@drawable/empty_key" />
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="104dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="140dp"
+        app:srcCompat="@drawable/empty_key" />+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="104dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="250dp"
+        app:srcCompat="@drawable/empty_key" />
+</RelativeLayout>
