@@ -69,7 +69,6 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold" />
-    android:text="TTS" />
 
     <TextView
         android:id="@+id/textView"
