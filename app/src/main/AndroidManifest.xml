@@ -53,6 +53,7 @@
         <activity android:name=".number7"/>
         <activity android:name=".number8"/>
         <activity android:name=".number9"/>
+        <activity android:name=".Dictionary"/>
         <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="orc"></meta-data>
     </application>

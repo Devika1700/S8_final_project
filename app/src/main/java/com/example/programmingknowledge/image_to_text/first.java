@@ -13,7 +13,7 @@ import java.util.Locale;
 public class first extends AppCompatActivity implements View.OnClickListener{
 
 
-    ImageView image1,image2,image3,image4;
+    ImageView image1,image2,image3,image4,image5;
 
     TextToSpeech textToSpeech;
     @Override
@@ -25,6 +25,8 @@ public class first extends AppCompatActivity implements View.OnClickListener{
         image2=findViewById(R.id.imageView3);
         image3=findViewById(R.id.imageView8);
         image4=findViewById(R.id.imageView9);
+        image5=findViewById(R.id.imageView10);
+        image5.setOnClickListener(this);
         image1.setOnClickListener(this);
         image2.setOnClickListener(this);
         image3.setOnClickListener(this);
@@ -64,6 +66,9 @@ public class first extends AppCompatActivity implements View.OnClickListener{
             case R.id.imageView9:
                 textToSpeech.speak("Can you write number 1",TextToSpeech.QUEUE_FLUSH,null);
                 startActivity(new Intent(this,number.class));
+
+            case R.id.imageView10:
+                startActivity(new Intent(this,Dictionary.class));
 
         }
     }
