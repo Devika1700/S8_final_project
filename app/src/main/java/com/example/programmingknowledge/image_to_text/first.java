@@ -61,14 +61,16 @@ public class first extends AppCompatActivity implements View.OnClickListener{
 
             case R.id.imageView8:
                 startActivity(new Intent(this,phonics.class));
-
+                break;
 
             case R.id.imageView9:
                 textToSpeech.speak("Can you write number 1",TextToSpeech.QUEUE_FLUSH,null);
                 startActivity(new Intent(this,number.class));
+                break;
 
             case R.id.imageView10:
                 startActivity(new Intent(this,Dictionary.class));
+                break;
 
         }
     }
