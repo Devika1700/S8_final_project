@@ -35,6 +35,7 @@ public class number extends AppCompatActivity {
         Button button = findViewById(R.id.button);
         imageView = findViewById(R.id.imageView);
         imageView2=findViewById(R.id.gif);
+        textView=(TextView) findViewById(R.id.output);
         Button button1=findViewById(R.id.showText);
         imageView2.setVisibility(View.INVISIBLE);
         button1.setOnClickListener(new View.OnClickListener() {
@@ -58,10 +59,12 @@ public class number extends AppCompatActivity {
                 // if No error is found then only it will run
                 if(i!=TextToSpeech.ERROR){
                     // To Choose language of speech
-                    textToSpeech.setLanguage(Locale.UK);
+                    textToSpeech.setLanguage(Locale.US);
                 }
+
             }
         });
+
     }
 
     @Override
@@ -80,22 +83,21 @@ public class number extends AppCompatActivity {
             Frame frame=new Frame.Builder().setBitmap(bitmap).build();
             SparseArray<TextBlock> sparseArray=textRecognizer.detect(frame);
             StringBuilder stringBuilder=new StringBuilder();
-
             for(int i=0;i<sparseArray.size();i++)
             {
                 TextBlock textBlock=sparseArray.valueAt(i);
                 stringBuilder.append(textBlock.getValue());
-                stringBuilder.append("\n");
-
-
+                //stringBuilder.append("\n");
+                textView.setText(stringBuilder.toString());
             }
-            String input=stringBuilder.toString();
-            if(input.equals("0")) {
+
+            String input=textView.getText().toString();
+            if(input.equals("1")) {
                 textToSpeech.speak("correct! Good Job!!",TextToSpeech.QUEUE_FLUSH,null);
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-
+                        textToSpeech.speak("Can you write number 2",TextToSpeech.QUEUE_FLUSH,null);
                         startActivity(new Intent(getApplicationContext(),number2.class));
                     }
                 },3000);
@@ -105,6 +107,7 @@ public class number extends AppCompatActivity {
             {
                 imageView2.setVisibility(View.VISIBLE);
             }
+
 
         }
     }

@@ -45,4 +45,19 @@
         app:layout_constraintVertical_bias="0.383"
         app:srcCompat="@drawable/phonics" />
 
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="138dp"
+        android:layout_height="123dp"
+        android:layout_marginLeft="190dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.383"
+        app:srcCompat="@drawable/number" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

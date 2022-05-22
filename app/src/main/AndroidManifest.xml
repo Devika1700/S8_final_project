@@ -44,6 +44,15 @@
         <activity android:name=".pract3"/>
         <activity android:name=".pract4"/>
         <activity android:name=".pract5"/>
+        <activity android:name=".number"/>
+        <activity android:name=".number2"/>
+        <activity android:name=".number3"/>
+        <activity android:name=".number4"/>
+        <activity android:name=".number5"/>
+        <activity android:name=".number6"/>
+        <activity android:name=".number7"/>
+        <activity android:name=".number8"/>
+        <activity android:name=".number9"/>
         <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="orc"></meta-data>
     </application>
