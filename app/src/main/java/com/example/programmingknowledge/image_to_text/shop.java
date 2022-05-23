@@ -91,9 +91,9 @@ public class shop extends AppCompatActivity implements View.OnClickListener{
                 playNoise4.start();
                 break;
 
-            /*case R.id.imageView15:
-                startActivity(new Intent(this,shop.class));
-                break;*/
+            case R.id.imageView15:
+                startActivity(new Intent(this,level.class));
+                break;
 
             case R.id.imageView14:
                 startActivity(new Intent(this,chop.class));
