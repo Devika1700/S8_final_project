@@ -1,0 +1,38 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DesignSurface\">\r\n    <option name=\"filePathToZoomLevelMap\">\r\n      <map>\r\n        <entry key=\"..\\:/Users/91735/StudioProjects/dyslexia_final/app/src/main/res/layout/activity_front.xml\" value=\"0.16485507246376813\" />\r\n        <entry key=\"..\\:/Users/91735/StudioProjects/dyslexia_final/app/src/main/res/layout/activity_main.xml\" value=\"0.17255434782608695\" />\r\n        <entry key=\"..\\:/Users/91735/StudioProjects/dyslexia_final/app/src/main/res/layout/cat.xml\" value=\"0.16485507246376813\" />\r\n        <entry key=\"..\\:/Users/91735/StudioProjects/dyslexia_final/app/src/main/res/layout/first.xml\" value=\"0.16485507246376813\" />\r\n        <entry key=\"..\\:/Users/91735/StudioProjects/dyslexia_final/app/src/main/res/layout/phonics.xml\" value=\"0.17255434782608695\" />\r\n        <entry key=\"..\\:/Users/Jeremy/AndroidStudioProjects/S8_final_project/app/src/main/res/layout/activity_front.xml\" value=\"0.3596014492753623\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 566dfb55268f47c4e11972a5f72e8cbaf946c933)
++++ b/.idea/misc.xml	(date 1653234676116)
+@@ -9,6 +9,9 @@
+         <entry key="..\:/Users/91735/StudioProjects/dyslexia_final/app/src/main/res/layout/first.xml" value="0.16485507246376813" />
+         <entry key="..\:/Users/91735/StudioProjects/dyslexia_final/app/src/main/res/layout/phonics.xml" value="0.17255434782608695" />
+         <entry key="..\:/Users/Jeremy/AndroidStudioProjects/S8_final_project/app/src/main/res/layout/activity_front.xml" value="0.3596014492753623" />
++        <entry key="..\:/Users/Jeremy/AndroidStudioProjects/S8_final_project/app/src/main/res/layout/activity_main.xml" value="0.36770833333333336" />
++        <entry key="..\:/Users/Jeremy/AndroidStudioProjects/S8_final_project/app/src/main/res/layout/bed.xml" value="0.36770833333333336" />
++        <entry key="..\:/Users/Jeremy/AndroidStudioProjects/S8_final_project/app/src/main/res/layout/first.xml" value="0.36770833333333336" />
+       </map>
+     </option>
+   </component>
+Index: app/src/main/res/values/styles.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <!-- Base application theme. -->\r\n    <style name=\"AppTheme\" parent=\"Theme.AppCompat.Light.DarkActionBar\">\r\n        <!-- Customize your theme here. -->\r\n        <item name=\"colorPrimary\">@color/colorPrimary</item>\r\n        <item name=\"colorPrimaryDark\">@color/colorPrimaryDark</item>\r\n        <item name=\"colorAccent\">@color/colorAccent</item>\r\n    </style>\r\n\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/styles.xml b/app/src/main/res/values/styles.xml
+--- a/app/src/main/res/values/styles.xml	(revision 566dfb55268f47c4e11972a5f72e8cbaf946c933)
++++ b/app/src/main/res/values/styles.xml	(date 1653234388072)
+@@ -1,6 +1,6 @@
+ <resources>
+     <!-- Base application theme. -->
+-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
++    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+         <!-- Customize your theme here. -->
+         <item name="colorPrimary">@color/colorPrimary</item>
+         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
