@@ -5,7 +5,6 @@
     android:id="@+id/speech"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#83A3BC"
     android:orientation="vertical"
     android:padding="16dp"
     android:weightSum="10"
@@ -62,7 +61,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="100dp"
         android:clickable="true"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@drawable/back" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -71,7 +70,7 @@
         android:layout_marginLeft="290dp"
         android:layout_marginTop="10dp"
         android:clickable="true"
-        app:srcCompat="@drawable/next" />
+        app:srcCompat="@drawable/home" />
 
     <ImageView
         android:id="@+id/imageView16"

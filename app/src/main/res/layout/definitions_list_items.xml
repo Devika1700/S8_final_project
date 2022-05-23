@@ -6,7 +6,7 @@
     app:cardElevation="8dp"
     app:cardCornerRadius="8dp"
     android:layout_margin="8dp"
-    app:cardBackgroundColor="@color/grey">
+    app:cardBackgroundColor="#8bd3dd">
 
     <LinearLayout
         android:orientation="vertical"
@@ -17,7 +17,7 @@
             android:textStyle="bold"
             android:textSize="18dp"
             android:fontFamily="@font/open"
-            android:textColor="@color/black"
+            android:textColor="#172c66"
             android:textAlignment="center"
             android:padding="8dp"
             android:text="Definition"
@@ -27,7 +27,7 @@
             android:id="@+id/textView_example"
             android:textStyle="bold"
             android:textSize="18dp"
-            android:textColor="@color/black"
+            android:textColor="#172c66"
             android:fontFamily="@font/open"
             android:textAlignment="center"
             android:padding="8dp"
@@ -37,7 +37,7 @@
         <TextView
             android:textStyle="bold"
             android:textSize="18dp"
-            android:textColor="@color/black"
+            android:textColor="#172c66"
             android:textAlignment="center"
             android:fontFamily="@font/open"
             android:padding="8dp"
@@ -51,7 +51,7 @@
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"
             android:textSize="16sp"
-            android:textColor="@color/black"
+            android:textColor="#172c66"
             android:textAlignment="center"
             android:fontFamily="@font/open"
             android:padding="8dp"
@@ -61,7 +61,7 @@
         <TextView
             android:textStyle="bold"
             android:textSize="18dp"
-            android:textColor="@color/black"
+            android:textColor="#172c66"
             android:textAlignment="center"
             android:padding="8dp"
             android:fontFamily="@font/open"
@@ -76,7 +76,7 @@
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"
             android:textSize="16sp"
-            android:textColor="@color/black"
+            android:textColor="#172c66"
             android:fontFamily="@font/open"
             android:textAlignment="center"
             android:padding="8dp"

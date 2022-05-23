@@ -5,7 +5,6 @@
     android:id="@+id/speech"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#83A3BC"
     android:orientation="vertical"
     android:padding="16dp"
     android:weightSum="10"
@@ -59,10 +58,10 @@
         android:id="@+id/imageView15"
         android:layout_width="85dp"
         android:layout_height="73dp"
-        android:layout_marginRight="100dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="100dp"
         android:clickable="true"
-        app:srcCompat="@drawable/backbtn" />
+        app:srcCompat="@drawable/back" />
 
     <ImageView
         android:id="@+id/imageView5"

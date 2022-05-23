@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
     tools:context=".Dictionary">
 
     <LinearLayout
@@ -15,12 +14,12 @@
             android:layout_margin="16sp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
-            app:cardBackgroundColor="@color/yellow"
+            app:cardBackgroundColor="#8bd3dd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/search_view"
-                app:defaultQueryHint="Search words...."
+                app:defaultQueryHint="Search"
                 app:iconifiedByDefault="false"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"/>
@@ -31,29 +30,32 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/textView_word"
-                android:textSize="24sp"
-                android:text="Word"
-                android:textColor="@color/black"
-                android:textAlignment="center"
-                android:padding="8dp"
-                android:fontFamily="@font/open"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open"
+                android:padding="8dp"
+                android:text="WORD"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#172c66"
+                android:textSize="24dp" />
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_phonetics"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+
             <TextView
-                android:text="Meanings"
-                android:textSize="24sp"
-                android:textColor="@color/black"
-                android:textAlignment="center"
-                android:padding="8dp"
-                android:fontFamily="@font/open"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open"
+                android:padding="8dp"
+                android:text="MEANINGS"
+                android:textAlignment="center"
+                android:textColor="#172c66"
+                android:textSize="24dp" />
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_meanings"
                 android:layout_width="match_parent"
