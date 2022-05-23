@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back2"
     android:orientation="vertical"
     android:padding="16dp"
     android:weightSum="10"
@@ -12,16 +11,19 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="109dp"
-        android:layout_height="92dp"
-        app:srcCompat="@drawable/home" />
+        android:layout_width="85dp"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/back" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/congrats"
-        android:layout_marginTop="200dp"/>
+        app:srcCompat="@drawable/congrats" />
 
 
-</LinearLayout>
+</RelativeLayout>

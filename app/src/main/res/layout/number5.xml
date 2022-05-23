@@ -11,45 +11,35 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="363dp"
+        android:layout_width="match_parent"
         android:layout_height="252dp"
         android:layout_marginBottom="25dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:background="#8bd3dd"
+        android:src="@drawable/cam" />
 
     <Button
         android:id="@+id/button"
-
-        android:layout_width="254dp"
-        android:layout_height="46dp"
-        android:layout_marginLeft="50dp"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="40dp"
         android:background="@drawable/buttonshape"
-
         android:fontFamily="@font/open"
-        android:shadowColor="#000000"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="5"
         android:text="OPEN CAMERA"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textColor="#172c66"
+        android:textSize="20dp"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/showText"
-
-        android:layout_width="254dp"
-        android:layout_height="46dp"
-        android:layout_marginLeft="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
         android:background="@drawable/buttonshape"
         android:fontFamily="@font/open"
-        android:shadowColor="#000000"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="5"
         android:text="CHECK"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textColor="#172c66"
+        android:textSize="20dp"
         android:textStyle="bold" />
 
     <pl.droidsonroids.gif.GifImageView
