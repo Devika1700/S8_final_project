@@ -24,9 +24,7 @@ public class front extends AppCompatActivity{
 
         topAnim= AnimationUtils.loadAnimation(this,R.anim.top_animation);
         bottomAnim=AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
-        image1=findViewById(R.id.image1);
         image2=findViewById(R.id.imageView2);
-        image1.setAnimation(topAnim);
         image2.setAnimation(bottomAnim);
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -34,7 +32,7 @@ public class front extends AppCompatActivity{
 
                 startActivity(new Intent(getApplicationContext(),first.class));
             }
-        },3000);
+        },4000);
 
     }
 

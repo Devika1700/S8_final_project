@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">dyslexia_final_copy</string>
+    <string name="app_name">DyslexiAid</string>
     <string name="hint">Tap on mic to start</string>
     <string name="hint2">Pronounce the word  WHO</string>
     <string name="hint3">Pronounce the word  HOW</string>

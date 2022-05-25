@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "dyslexia_final_copy"
+rootProject.name = "DyslexiAid"
